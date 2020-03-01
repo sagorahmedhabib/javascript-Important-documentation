@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name=form1>
+        <table cellSpacing=1 cellPadding=1 border=1>
+            <body>
+                <tr>
+                <td align=middle colSpan=3><B><FONT size=4>Percentage Calculator</FONT></b> 
+                </td>
+                <tr>
+                <td>What is <input size=5 name=a> % of <input size=5 name=b>?</td>
+                <td>Answer: <input maxLength=40 size=5 name=total1></td>
+                <td><input onclick=perc1() type=button value=Calculate></td>
+            </body>
+        </table>
+        <input type=reset value=Reset style="width: 422px; height:30px; ">
+    </form>
+    
+    <script>
+     function perc1() {
+        a = document.form1.a.value/100;
+        b = a*document.form1.b.value;
+        document.form1.total1.value = b
+     }
+    </script>
+</body>
+</html>
