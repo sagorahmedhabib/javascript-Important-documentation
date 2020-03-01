@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name=form1>
+        <table cellSpacing=1 cellPadding=1 border=1>
+            <body>
+                <tr>
+                <td align=middle colSpan=3><B><FONT size=4>Percentage Calculator</FONT></b> 
+                </td>
+                <tr>
+                <td>What is <input size=5 name=a> % of <input size=5 name=b onkeyup=perc1()>?</td>
+                <td>Percentage Answer: <input maxLength=40 size=5 name=percentage></td>
+                <td>Total Answer: <input maxLength=40 size=5 name=total1></td>
+            </body>
+        </table>
+        <input type=reset value=Reset style="width: 575px; height:30px; ">
+    </form>
+    
+    <script>
+     function perc1() {
+       const a = document.form1.a.value/100;
+       const b = a*document.form1.b.value;
+       const c = document.form1.a.value;
+       const d = c-b;
+            document.form1.percentage.value = b;
+            document.form1.total1.value = d
+     }
+    </script>
+</body>
+</html>
